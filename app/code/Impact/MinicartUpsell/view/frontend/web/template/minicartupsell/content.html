@@ -1,0 +1,10 @@
+<div class="component-wrapper" data-bind="if: getTotalCartItems() > 0">
+    <div>This is in Javascript/Knockout, the correct way:</div>
+    <div>
+        How many items in cart:<span
+            data-bind="text: getCartItems().length"
+        ></span>
+    </div>
+    <div>Items list:<span data-bind="text: getCartItems()"></span></div>
+    <br />
+</div>

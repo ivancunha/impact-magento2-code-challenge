@@ -1,0 +1,23 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Impact_MinicartUpsell::css/minicartupsell.css"/>
+    </head>
+   <body>
+       <referenceContainer name="minicart.addons">
+           <block class="Impact\MinicartUpsell\Block\Cart\Sidebar" name="minicart_upsell" template="Impact_MinicartUpsell::cart/minicart.phtml" after="-">
+               <arguments>
+                   <argument name="jsLayout" xsi:type="array">
+                       <item name="components" xsi:type="array">
+                           <item name="minicart-addons" xsi:type="array">
+                               <item name="component" xsi:type="string">Impact_MinicartUpsell/js/view/minicartupsell</item>
+                               <item name="config" xsi:type="array">
+                                   <item name="template" xsi:type="string">Impact_MinicartUpsell/minicartupsell/content</item>
+                               </item>
+                           </item>
+                       </item>
+                   </argument>
+               </arguments>
+           </block>
+       </referenceContainer>
+   </body>
+</page>
