@@ -59,7 +59,7 @@ class Sidebar extends Template
         //     echo "<br />";            
         // }
 
-
+            
         $itemsCollection = $this->_checkoutSession->getQuote()->getItemsCollection();
         $itemsCollection->getSelect()->order('updated_at DESC');
         $latestItem      = $itemsCollection->getLastItem(); 
