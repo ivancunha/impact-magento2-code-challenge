@@ -61,22 +61,23 @@ class Sidebar extends Template
 
             
         $itemsCollection = $this->_checkoutSession->getQuote()->getItemsCollection();
-        $itemsCollection->getSelect()->order('updated_at DESC');
-        $latestItem      = $itemsCollection->getLastItem(); 
-        $product         = $latestItem->getProduct();
-        echo 'ID: '.$latestItem->getProductId().'<br />';
-        echo 'Name: '.$latestItem->getName().'<br />';
-        echo 'Sku: '.$latestItem->getSku().'<br />';
-        echo 'Quantity: '.$latestItem->getQty().'<br />';
-        echo 'Price: '.$latestItem->getPrice().'<br />';
-        echo "<br />";
 
 
-        if (!isset($latestItem)) { 
+
+        if (!isset($itemsCollection)) { 
             return __('Hello 1');
         }
         else {
             // The goal here is to show a message or show nothing, if the last added item has no up-sell products configured in the backoffice.
+            // $itemsCollection->getSelect()->order('updated_at DESC');
+            // $latestItem      = $itemsCollection->getLastItem(); 
+            // $product         = $latestItem->getProduct();
+            // echo 'ID: '.$latestItem->getProductId().'<br />';
+            // echo 'Name: '.$latestItem->getName().'<br />';
+            // echo 'Sku: '.$latestItem->getSku().'<br />';
+            // echo 'Quantity: '.$latestItem->getQty().'<br />';
+            // echo 'Price: '.$latestItem->getPrice().'<br />';
+            // echo "<br />";
             return __('Hello 2');
         }
     }
