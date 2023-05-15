@@ -4,7 +4,7 @@ This repository has a basic installation of Magento 2.4.6 with Sample Data.
 
 ## LOCAL DEV ENVIRONMENT
 
-To test this Magento installation on a local environment, follow these instructions:
+To test this Magento installation on a local environment, you can use your own environment or follow these instructions:
 
 Use this: https://github.com/markshust/docker-magento/
 
@@ -23,6 +23,8 @@ Get the files:
 -   git clone -b minicart https://github.com/ivancunha/impact-magento2-code-challenge.git src
 -   Run the command: docker-compose -f compose.yaml up -d
 -   Run the command: bin/copytocontainer --all
+-   Run the command: bin/composer install
+-   Run the command: bin/copyfromcontainer vendor
 
 Get the database:
 
@@ -40,4 +42,5 @@ Then restart with this command:
 -   Run the command: bin/fixowns && bin/fixperms && bin/magento setup:di:compile && rm -Rf src/var/cache/_ && rm -Rf src/generated/_ && bin/magento cache:clean && bin/magento cache:flush && bin/magento indexer:reset && bin/magento setup:upgrade && bin/magento setup:di:compile && bin/magento setup:static-content:deploy -f && bin/magento indexer:reindex && bin/magento cache:clean && bin/magento cache:flush
 
 Then open the domain:
-• Open the browser and go to https://impactmagento2codechallenge.test/
+
+-   Open the browser and go to https://impactmagento2codechallenge.test/
